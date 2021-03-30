@@ -15,6 +15,12 @@ export class Tab4Page implements OnInit {
   ngOnInit() {
     let isiindex = this.route.snapshot.paramMap.get('nama');
     this.paramindex = isiindex;
+    console.log(this.paramindex);
+    if(this.paramindex==""||this.paramindex==null){
+    }
+    else{
+      document.getElementById('ctn').append('<ion-img [src]="paramindex" id="image"></ion-img>');
+    }
   }
 
 }
